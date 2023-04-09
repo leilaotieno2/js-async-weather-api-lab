@@ -1,71 +1,42 @@
+<!DOCTYPE html>
 <html>
-<head>
-  <title>Weather App</title>
-  <script src="index.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
-  <link rel="stylesheet" href="css/index.css">
-</head>
-<body>
+  <head>
+    <title>Weather App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+  </head>
+  <body>
+    <form id="city-form">
+      <input type="text" placeholder="Enter city" id="city" />
+      <input type="submit" />
+    </form>
 
-  <form id="cityForm" action="">
-    <input type="text" placeholder="Enter city" id="city"/>
-    <input type="submit"/>
-  </form>
+    <h2>Today</h2>
+    <section id="current-weather">
+      <table>
+        <tr>
+          <th>Current Temperature</th>
+          <th>Low</th>
+          <th>High</th>
+          <th>Humidity</th>
+          <th>Cloud Cover</th>
+        </tr>
+        <tr>
+          <td id="temp"></td>
+          <td id="low"></td>
+          <td id="high"></td>
+          <td id="humidity"></td>
+          <td id="cloud-cover"></td>
+        </tr>
+      </table>
+    </section>
 
-  <h2>Today</h2>
-  <section id="today">
-    <table>
-      <tr>
-        <th >
-          Current Temperature
-        </th>
-        <th>
-          Low
-        </th>
-        <th>
-          High
-        </th>
-        <th>
-          Humidity
-        </th>
-        <th>
-          Cloud Cover
-        </th>
-      </tr>
-      <tr>
-        <td id="temp">
+    <!-- Optional -->
+    <canvas id="weather-chart"></canvas>
 
-        </td>
-        <td id="low">
+    <h2>Five Day Forecast</h2>
+    <aside id="five-day-forecast"></aside>
 
-        </td>
-        <td id="high">
-
-        </td>
-        <td id="humidity">
-
-        </td>
-        <td id="cloudCover">
-
-        </td>
-        <td id="sunrise">
-
-        </td>
-        <td id="sunset">
-
-        </td>
-      </tr>
-    </table>
-  </section>
-
-  <!-- Optional -->
-  <canvas id="WeatherChart"></canvas>
-
-  <h2>Five Day Forcast</h2>
-  <aside>
-
-  </aside>
-
-
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>
